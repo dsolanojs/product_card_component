@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --Dark_Cyan:hsl(158, 36%, 37%);
+    --Dark_Cyan_Hover:hsl(158, 53%, 25%);
+    --Cream:hsl(30, 38%, 92%);
+    --Very_Dark_Blue:hsl(212, 21%, 14%);
+    --Dark_Grayish_Blue:hsl(228, 12%, 48%);
+    --White:hsl(0, 0%, 100%);
+
+    --Paragraph_size: 14px;
+
+}
+body{
+    background-color: var(--Cream);
+}
+.main-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.child-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(200px, 300px) minmax(200px,300px);
+    grid-auto-rows: 500px;
+    place-content: center;
+    border-radius: 30px;
+    margin: 50px;
+}
+
+.left-container img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 20px 0px 0px 20px;
+}
+.right-container{
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 35px;
+    justify-content: space-around;
+    background-color: var(--White);
+    border-radius: 0px 20px 20px 0px;
+}
+.right-container .main-title{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    letter-spacing: 8px;
+}
+.right-container .perfume-name{
+    font-size: 35px;
+    font-family: 'Fraunces', serif;
+    line-height: 35px;
+    font-weight: 700;
+    color: var(--Very_Dark_Blue);
+}
+.right-container .description{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+.general-prices {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.general-prices .current-price{
+    color: var(--Dark_Cyan);
+    font-family: 'Fraunces', serif;
+    font-size: 40px;
+    margin-right: 10px;
+}
+.general-prices .discounted-price{
+    text-decoration: line-through;
+    margin-top: -10px;
+}
+.button-container{
+    width: 100%;
+}
+a{
+    width: 100%;
+    height: 60px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--Dark_Cyan);
+    color: var(--White);
+    border-radius: 10px;
+    transition: 1s;
+}
+a:hover{
+    background-color: var(--Dark_Cyan_Hover);
+    transition: 1s;
+}
+a img{
+    margin-right: 10px;
+    width: 20px;
+}
+@media(max-width:621px){
+    
+    .child-container{
+        grid-template-rows: minmax(200px, 400px) minmax(200px,400px);
+        grid-template-columns: 350px;
+    }
+    
+    .left-container img{
+        border-radius: 20px 20px 0px 0px;
+    }
+    .right-container{
+        border-radius: 0px 0px 20px 20px;
+    }
+}
