@@ -24,7 +24,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 .child-container{
     width: 100%;
@@ -33,7 +32,7 @@ body{
     grid-auto-rows: 500px;
     place-content: center;
     border-radius: 30px;
-    margin: 50px;
+    
 }
 
 .left-container img{
@@ -112,10 +111,14 @@ a img{
     width: 20px;
 }
 @media(max-width:621px){
-    
+    body{
+        min-width: 100vw;
+        min-height: 100vh;
+    }
     .child-container{
-        grid-template-rows: minmax(200px, 400px) minmax(200px,400px);
-        grid-template-columns: 350px;
+        grid-template-rows: minmax(100px, 400px) minmax(100px,400px);
+        grid-template-columns: minmax(200px, 350px);
+        padding: 40px;
     }
     
     .left-container img{
